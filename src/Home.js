@@ -10,7 +10,6 @@ function Home(props) {
       <div
         className="container"
         style={{
-          color: props.textColor ?? "initial",
           backgroundColor: props.bgColor ?? "initial",
           filter: `contrast(${props.contrast})`,
         }}
@@ -30,7 +29,11 @@ function Home(props) {
             >
               Heading 1
             </h1>
-            <p>
+            <p
+              style={{
+                color: props.textColor ?? "initial",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               finibus nisl nec diam convallis pulvinar. Vestibulum iaculis odio
               felis, sit amet congue leo aliquam ac. Nullam dignissim ligula nec
@@ -50,7 +53,11 @@ function Home(props) {
             >
               Heading 2
             </h2>
-            <p>
+            <p
+              style={{
+                color: props.textColor ?? "initial",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               finibus nisl nec diam convallis pulvinar. Vestibulum iaculis odio
               felis, sit amet congue leo aliquam ac. Nullam dignissim ligula nec
@@ -70,7 +77,11 @@ function Home(props) {
             >
               Heading 3
             </h2>
-            <p>
+            <p
+              style={{
+                color: props.textColor ?? "initial",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               finibus nisl nec diam convallis pulvinar. Vestibulum iaculis odio
               felis, sit amet congue leo aliquam ac. Nullam dignissim ligula nec
@@ -79,7 +90,11 @@ function Home(props) {
               vitae molestie. Donec a orci non turpis tincidunt dictum. Etiam id
               quam enim. Proin sit amet fermentum enim.
             </p>
-            <p>
+            <p
+              style={{
+                color: props.textColor ?? "initial",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               finibus nisl nec diam convallis pulvinar. Vestibulum iaculis odio
               felis, sit amet congue leo aliquam ac. Nullam dignissim ligula nec
@@ -100,7 +115,11 @@ function Home(props) {
             >
               Heading 4
             </h2>
-            <p>
+            <p
+              style={{
+                color: props.textColor ?? "initial",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               finibus nisl nec diam convallis pulvinar. Vestibulum iaculis odio
               felis, sit amet congue leo aliquam ac. Nullam dignissim ligula nec
@@ -139,7 +158,7 @@ function Home(props) {
                 {props.textColor.length > 0 && (
                   <>
                     <a
-                      href="#"
+                      href="#/"
                       onClick={(event) => props.handleTextColor(event, "")}
                     >
                       Cancel
@@ -165,7 +184,7 @@ function Home(props) {
                 {props.bgColor.length > 0 && (
                   <>
                     <a
-                      href="#"
+                      href="#/"
                       onClick={(event) => props.handleBgColor(event, "")}
                     >
                       Cancel
@@ -191,7 +210,7 @@ function Home(props) {
                 {props.titleColor.length > 0 && (
                   <>
                     <a
-                      href="#"
+                      href="#/"
                       onClick={(event) => props.handleTitleColor(event, "")}
                     >
                       Cancel
@@ -202,7 +221,6 @@ function Home(props) {
               <div className="contrast-control">
                 <div className="contrast-select">
                   <div
-                    className="dark-contrast"
                     onClick={(event) => props.handleContrast(event, "50%")}
                     className={`dark-contrast ${
                       props.contrast === "50%" ? "active" : ""
@@ -214,7 +232,6 @@ function Home(props) {
                     <div>Dark</div>
                   </div>
                   <div
-                    className="light-contrast"
                     onClick={(event) => props.handleContrast(event, "100%")}
                     className={`dark-contrast ${
                       props.contrast === "100%" ? "active" : ""
@@ -226,7 +243,6 @@ function Home(props) {
                     <div>Light</div>
                   </div>
                   <div
-                    className="high-contrast"
                     onClick={(event) => props.handleContrast(event, "200%")}
                     className={`dark-contrast ${
                       props.contrast === "200%" ? "active" : ""
@@ -242,7 +258,7 @@ function Home(props) {
                   {props.contrast.length > 0 && (
                     <>
                       <a
-                        href="#"
+                        href="#/"
                         onClick={(event) => props.handleContrast(event, "")}
                       >
                         Cancel

@@ -12,6 +12,7 @@ function App() {
   function handleTextColor(event, color) {
     console.log(color);
     setTextColor(color);
+    setTitleColor("");
   }
 
   function handleBgColor(event, color) {
